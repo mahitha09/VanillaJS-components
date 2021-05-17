@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Navigation</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+</head>
+<body>
+
+    <nav>
+        <li>
+            <a href="#" >Home</a>
+        </li>
+        <li>
+            <a href="#" >GitHub</a>
+        </li>
+        <li>
+            <a href="#" >Blogs</a>
+        </li>
+        <li>
+            <a href="#" >Contact</a>
+        </li>
+    </nav>
+
+    <button class="navBtn"><i class="fas fa-bars"></i></button>
+    
+    <script>
+        //variables
+        const navBtn = document.querySelector('.navBtn');
+        const nav = document.querySelector('nav');
+
+        //event-listeners
+        navBtn.addEventListener('click',()=>{
+            nav.classList.toggle('nav-bar');
+            if(nav.classList.contains('nav-bar')){
+                navBtn.innerHTML = '<i class="fas fa-times"></i>';
+                navBtn.classList.add('cross');
+            }
+            else{
+                navBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+
+    
+        
+    </script>
+</body>
+</html>
